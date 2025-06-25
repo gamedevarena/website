@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
   <script src="./src/js/event-card.js" type="module"></script>
+  <script src="./src/js/founder-card.js" type="module"></script>
   <link rel="icon" type="image/png" href="public/logo-silhouette.ico">
 </head>
 
@@ -26,7 +27,8 @@
       </ul>
     </nav>
     <div class="flex flex-row items-center justify-end">
-      <button id="contattaci" class="button button-secondary" aria-label="Contattaci via email" onclick="onContactButtonClick()">
+      <button id="contattaci" class="button button-secondary" aria-label="Contattaci via email"
+        onclick="onContactButtonClick()">
         <i class="ph-fill ph-envelope mr-xs" style="font-size:1.2em; vertical-align:middle;" aria-hidden="true"></i>
         Contattaci
       </button>
@@ -40,7 +42,8 @@
       <p class="text-center">Unisciti a noi per scoprire, imparare e condividere tutto sullo sviluppo di videogiochi.
         Eventi, talk e networking per appassionati e professionisti.</p>
       <a href="#events" class="mt-md text-decoration-none" aria-label="Scopri di più sulla community">
-        <button class="button button-primary w-auto flex flex-row items-center justify-center" aria-label="Scopri di più">
+        <button class="button button-primary w-auto flex flex-row items-center justify-center"
+          aria-label="Scopri di più">
           <i class="ph-fill ph-arrow-down mr-xs" aria-hidden="true"></i>
           <span class="align-middle">Scopri di più</span>
         </button>
@@ -50,13 +53,13 @@
 
   <section
     class="events-section p-md bg-primary m-md radius-lg shadow-lg flex flex-col items-center w-full lg:w-10/12 xl:w-8/12"
-    aria-labelledby="prossimi-eventi"
-    id="events">
+    aria-labelledby="prossimi-eventi" id="events">
     <h2 class="text-white mb-md" id="prossimi-eventi">Prossimi Eventi</h2>
     <div class="w-full flex flex-row flex-wrap justify-start align-start">
       <!-- event-card custom elements should have their own accessibility, but add role and aria-label for container -->
-      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg" speaker="Giulia Verdi"
-        class="inline-flex md:w-full lg:w-6/12 p-xs" role="article" aria-label="Evento Pixel Art: Dall’Idea al Gioco">
+      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg"
+        speaker="Giulia Verdi" class="inline-flex md:w-full lg:w-6/12 p-xs" role="article"
+        aria-label="Evento Pixel Art: Dall’Idea al Gioco">
         <span slot="title">Pixel Art: Dall’Idea al Gioco</span>
         <span slot="description">
           Scopri le tecniche base e avanzate della pixel art per videogiochi. Workshop pratico con esempi di animazione
@@ -65,8 +68,9 @@
         <span slot="date">25 Maggio 2025</span>
         <span slot="location">Torino, Italia</span>
       </event-card>
-      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg" speaker="Andrea Neri"
-        class="inline-flex md:w-full lg:w-6/12 p-xs" role="article" aria-label="Evento Audio nei Videogiochi: Musica e Sound Design">
+      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg"
+        speaker="Andrea Neri" class="inline-flex md:w-full lg:w-6/12 p-xs" role="article"
+        aria-label="Evento Audio nei Videogiochi: Musica e Sound Design">
         <span slot="title">Audio nei Videogiochi: Musica e Sound Design</span>
         <span slot="description">
           Un viaggio nel mondo dell’audio per videogiochi: come creare colonne sonore efficaci e sound effects
@@ -75,8 +79,9 @@
         <span slot="date">28 Maggio 2025</span>
         <span slot="location">Online</span>
       </event-card>
-      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg" speaker="Sara Colombo"
-        class="inline-flex md:w-full lg:w-6/12 p-xs" role="article" aria-label="Evento Marketing per Indie Game Developer">
+      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg"
+        speaker="Sara Colombo" class="inline-flex md:w-full lg:w-6/12 p-xs" role="article"
+        aria-label="Evento Marketing per Indie Game Developer">
         <span slot="title">Marketing per Indie Game Developer</span>
         <span slot="description">
           Strategie e strumenti per promuovere il tuo videogioco indie: social media, community, press kit e
@@ -85,8 +90,9 @@
         <span slot="date">2 Giugno 2025</span>
         <span slot="location">Bologna, Italia</span>
       </event-card>
-      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg" speaker="Bianca Bernie"
-        class="inline-flex md:w-full lg:w-6/12 p-xs" role="article" aria-label="Evento Come si sviluppa un videogioco?">
+      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg"
+        speaker="Bianca Bernie" class="inline-flex md:w-full lg:w-6/12 p-xs" role="article"
+        aria-label="Evento Come si sviluppa un videogioco?">
         <span slot="title">Come si sviluppa un videogioco?</span>
         <span slot="description">
           Un talk introduttivo che esplora le fasi fondamentali dello sviluppo di un videogioco: dall’idea iniziale,
@@ -96,8 +102,9 @@
         <span slot="date">10 Maggio 2025</span>
         <span slot="location">Online</span>
       </event-card>
-      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg" speaker="Marco Rossi"
-        class="inline-flex md:w-full lg:w-6/12 p-xs" role="article" aria-label="Evento Game Design: Creare Esperienze Coinvolgenti">
+      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg"
+        speaker="Marco Rossi" class="inline-flex md:w-full lg:w-6/12 p-xs" role="article"
+        aria-label="Evento Game Design: Creare Esperienze Coinvolgenti">
         <span slot="title">Game Design: Creare Esperienze Coinvolgenti</span>
         <span slot="description">
           Un approfondimento sul game design, con focus su come progettare meccaniche di gioco coinvolgenti e
@@ -107,8 +114,9 @@
         <span slot="date">15 Maggio 2025</span>
         <span slot="location">Milano, Italia</span>
       </event-card>
-      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg" speaker="Luca Bianchi"
-        class="inline-flex md:w-full lg:w-6/12 p-xs" role="article" aria-label="Evento Unity vs Unreal: Quale Motore Scegliere?">
+      <event-card agency="Milestone" agencyAvatar="public/brands/milestone.png" avatar="public/avatar-example.jpg"
+        speaker="Luca Bianchi" class="inline-flex md:w-full lg:w-6/12 p-xs" role="article"
+        aria-label="Evento Unity vs Unreal: Quale Motore Scegliere?">
         <span slot="title">Unity vs Unreal: Quale Motore Scegliere?</span>
         <span slot="description">
           Un confronto tra i due motori di gioco più popolari: Unity e Unreal Engine. Analizzeremo le caratteristiche,
@@ -174,15 +182,30 @@
     </ul>
     </p>
     <h4 class="mb-xs">Founders / Mentors / Advisors</h4>
-    <ul class="mb-md">
-      <li>Cesare Montresor - Software Developer. PhD Student. Community Organizer.</li>
-      <li>Nicola Castellani - Game Developer.</li>
-      <li>Eugenio Perinelli - 3D Artist. Docente.</li>
-      <li>Fabrizio Radica - Game Developer. Docente.</li>
-    </ul>
+
+    <div class="w-full flex flex-row items-start justify-center">
+      <founder-card name="Eugenio Perinelli" avatar="public/founders/eugenio.png"
+      class="inline-flex md:w-full lg:w-6/12 p-xs" role="article" aria-label="Eugenio Perinelli - Founder">
+        <span slot="role">Founder</span>
+        <span slot="bio">
+          Da sempre appassionato di computergrafica 3D e videogiochi, Eugenio ha iniziato fin da giovane a creare grafica, animazioni e software.<br>
+          Ha trasformato la sua passione in una carriera internazionale, lavorando in Italia e all’estero nei settori del design, televisione, ricostruzione archeologica, videogame e web.<br>
+          Oggi affianca all’attività professionale anche quella di docente, <span class="bg-accent">condividendo esperienza e conoscenze con le nuove generazioni di creativi.</span>
+        </span>
+      </founder-card>
+      <founder-card name="Nicola Castellani" avatar="public/founders/nicola-avatar.png" class="inline-flex md:w-full lg:w-6/12 p-xs" role="article"
+        aria-label="Nicola Castellani - Founder">
+        <span slot="role">UI Specialist</span>
+        <span slot="bio">
+          Sviluppatore e gamer, Nicola è specializzato nella creazione di interfacce intuitive per il web e il gaming.<br>
+          La sua missione è <span class="bg-accent">rendere le esperienze digitali coinvolgenti e accessibili a tutti</span>, unendo tecnologie moderne e design inclusivo per abbattere ogni barriera tra persone e videogiochi.
+        </span>
+      </founder-card>
+    </div>
   </section>
 
-  <section class="footer p-md m-md flex flex-col items-center w-full lg:w-10/12 xl:w-8/12" role="contentinfo" id="contacts">
+  <section class="footer p-md m-md flex flex-col items-center w-full lg:w-10/12 xl:w-8/12" role="contentinfo"
+    id="contacts">
     <div class="w-full flex flex-column md:flex-row flex-wrap justify-between items-center">
       <!-- Logo -->
       <!-- Contacts -->
@@ -192,12 +215,14 @@
         <p class="mb-xs flex flex-row items-center justify-center">
           <i class="ph-fill ph-envelope mr-xs" aria-hidden="true"></i>
           <span class="visually-hidden">Email:</span>
-          <a href="mailto:hello.gamedevarena@gmail.com" class="text-primary" id="email-contacts" aria-label="Email">hello.gamedevarena@gmail.com</a>
+          <a href="mailto:hello.gamedevarena@gmail.com" class="text-primary" id="email-contacts"
+            aria-label="Email">hello.gamedevarena@gmail.com</a>
         </p>
         <p class="mb-xs flex flex-row items-center">
           <i class="ph-fill ph-github-logo mr-xs" aria-hidden="true"></i>
           <span class="visually-hidden">GitHub:</span>
-          <a href="https://github.com/gamedevarena" target="_blank" rel="noopener noreferrer" class="text-primary" aria-label="Github Repository">github.com/gamedevarena</a>
+          <a href="https://github.com/gamedevarena" target="_blank" rel="noopener noreferrer" class="text-primary"
+            aria-label="Github Repository">github.com/gamedevarena</a>
         </p>
       </div>
     </div>

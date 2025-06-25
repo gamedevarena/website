@@ -73,7 +73,7 @@ button:hover {
 
 .sticky-header {
   position: sticky;
-  top: var(--space-md);
+  top: var(--space-lg);
   z-index: 100;
   background: inherit;
 }
