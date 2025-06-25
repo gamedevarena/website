@@ -26,7 +26,7 @@
       </ul>
     </nav>
     <div class="flex flex-row items-center justify-end">
-      <button id="contattaci" class="button button-secondary" aria-label="Contattaci via email">
+      <button id="contattaci" class="button button-secondary" aria-label="Contattaci via email" onclick="onContactButtonClick()">
         <i class="ph-fill ph-envelope mr-xs" style="font-size:1.2em; vertical-align:middle;" aria-hidden="true"></i>
         Contattaci
       </button>
@@ -39,7 +39,7 @@
       <h2 class="text-center">Benvenuto nell'Arena degli Sviluppatori di Giochi!</h2>
       <p class="text-center">Unisciti a noi per scoprire, imparare e condividere tutto sullo sviluppo di videogiochi.
         Eventi, talk e networking per appassionati e professionisti.</p>
-      <a href="#about" class="mt-md text-decoration-none" aria-label="Scopri di più sulla community">
+      <a href="#events" class="mt-md text-decoration-none" aria-label="Scopri di più sulla community">
         <button class="button button-primary w-auto flex flex-row items-center justify-center" aria-label="Scopri di più">
           <i class="ph-fill ph-arrow-down mr-xs" aria-hidden="true"></i>
           <span class="align-middle">Scopri di più</span>
@@ -56,9 +56,8 @@
     <div class="w-full flex flex-row flex-wrap justify-start align-start">
       <!-- event-card custom elements should have their own accessibility, but add role and aria-label for container -->
       <event-card avatar="public/avatar-example.jpg" speaker="Giulia Verdi"
-        class="inline-flex md:w-full lg:w-4/12 p-xs" role="article" aria-label="Evento Pixel Art: Dall’Idea al Gioco">
+        class="inline-flex md:w-full lg:w-6/12 xl:w-4/12 p-xs" role="article" aria-label="Evento Pixel Art: Dall’Idea al Gioco">
         <span slot="title">Pixel Art: Dall’Idea al Gioco</span>
-        <span slot="speaker">Giulia Verdi</span>
         <span slot="description">
           Scopri le tecniche base e avanzate della pixel art per videogiochi. Workshop pratico con esempi di animazione
           e consigli su strumenti e workflow.
@@ -67,9 +66,8 @@
         <span slot="location">Torino, Italia</span>
       </event-card>
       <event-card avatar="public/avatar-example.jpg" speaker="Andrea Neri"
-        class="inline-flex md:w-full lg:w-4/12 p-xs" role="article" aria-label="Evento Audio nei Videogiochi: Musica e Sound Design">
+        class="inline-flex md:w-full lg:w-6/12 xl:w-4/12 2xl:w- p-xs" role="article" aria-label="Evento Audio nei Videogiochi: Musica e Sound Design">
         <span slot="title">Audio nei Videogiochi: Musica e Sound Design</span>
-        <span slot="speaker">Andrea Neri</span>
         <span slot="description">
           Un viaggio nel mondo dell’audio per videogiochi: come creare colonne sonore efficaci e sound effects
           immersivi. Dimostrazioni live e strumenti consigliati.
@@ -78,9 +76,8 @@
         <span slot="location">Online</span>
       </event-card>
       <event-card avatar="public/avatar-example.jpg" speaker="Sara Colombo"
-        class="inline-flex md:w-full lg:w-4/12 p-xs" role="article" aria-label="Evento Marketing per Indie Game Developer">
+        class="inline-flex md:w-full lg:w-6/12 xl:w-4/12 2xl:w- p-xs" role="article" aria-label="Evento Marketing per Indie Game Developer">
         <span slot="title">Marketing per Indie Game Developer</span>
-        <span slot="speaker">Sara Colombo</span>
         <span slot="description">
           Strategie e strumenti per promuovere il tuo videogioco indie: social media, community, press kit e
           crowdfunding. Consigli pratici da chi ce l’ha fatta.
@@ -89,9 +86,8 @@
         <span slot="location">Bologna, Italia</span>
       </event-card>
       <event-card avatar="public/avatar-example.jpg" speaker="Bianca Bernie"
-        class="inline-flex md:w-full lg:w-4/12 p-xs" role="article" aria-label="Evento Come si sviluppa un videogioco?">
+        class="inline-flex md:w-full lg:w-6/12 xl:w-4/12 2xl:w- p-xs" role="article" aria-label="Evento Come si sviluppa un videogioco?">
         <span slot="title">Come si sviluppa un videogioco?</span>
-        <span slot="speaker">Bianca Bernie</span>
         <span slot="description">
           Un talk introduttivo che esplora le fasi fondamentali dello sviluppo di un videogioco: dall’idea iniziale,
           alla progettazione, fino alla realizzazione tecnica e al lancio. Ideale per chi vuole capire il processo
@@ -101,9 +97,8 @@
         <span slot="location">Online</span>
       </event-card>
       <event-card avatar="public/avatar-example.jpg" speaker="Marco Rossi"
-        class="inline-flex md:w-full lg:w-4/12 p-xs" role="article" aria-label="Evento Game Design: Creare Esperienze Coinvolgenti">
+        class="inline-flex md:w-full lg:w-6/12 xl:w-4/12 2xl:w- p-xs" role="article" aria-label="Evento Game Design: Creare Esperienze Coinvolgenti">
         <span slot="title">Game Design: Creare Esperienze Coinvolgenti</span>
-        <span slot="speaker">Marco Rossi</span>
         <span slot="description">
           Un approfondimento sul game design, con focus su come progettare meccaniche di gioco coinvolgenti e
           bilanciare l’esperienza del giocatore. Attraverso casi studio e analisi di giochi famosi, scoprirai le chiavi
@@ -113,9 +108,8 @@
         <span slot="location">Milano, Italia</span>
       </event-card>
       <event-card avatar="public/avatar-example.jpg" speaker="Luca Bianchi"
-        class="inline-flex md:w-full lg:w-4/12 p-xs" role="article" aria-label="Evento Unity vs Unreal: Quale Motore Scegliere?">
+        class="inline-flex md:w-full lg:w-6/12 xl:w-4/12 2xl:w- p-xs" role="article" aria-label="Evento Unity vs Unreal: Quale Motore Scegliere?">
         <span slot="title">Unity vs Unreal: Quale Motore Scegliere?</span>
-        <span slot="speaker">Luca Bianchi</span>
         <span slot="description">
           Un confronto tra i due motori di gioco più popolari: Unity e Unreal Engine. Analizzeremo le caratteristiche,
           i punti di forza e le debolezze di entrambi, aiutandoti a scegliere il motore più adatto alle tue esigenze di
@@ -198,7 +192,7 @@
         <p class="mb-xs flex flex-row items-center justify-center">
           <i class="ph-fill ph-envelope mr-xs" aria-hidden="true"></i>
           <span class="visually-hidden">Email:</span>
-          <a href="mailto:hello.gamedevarena@gmail.com" class="text-primary" aria-label="Email">hello.gamedevarena@gmail.com</a>
+          <a href="mailto:hello.gamedevarena@gmail.com" class="text-primary" id="email-contacts" aria-label="Email">hello.gamedevarena@gmail.com</a>
         </p>
         <p class="mb-xs flex flex-row items-center">
           <i class="ph-fill ph-github-logo mr-xs" aria-hidden="true"></i>
@@ -223,6 +217,10 @@
         header.classList.remove('shadow-md');
       }
     });
+
+    function onContactButtonClick() {
+      document.getElementById('email-contacts').click();
+    }
   </script>
 </body>
 

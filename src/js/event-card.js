@@ -67,15 +67,26 @@ class EventCard extends StyledComponent {
       if (avatar) {
         avatar.alt = newValue || "Avatar";
       }
+
+      const slot = this.shadowRoot.querySelector('slot[name="speaker"]');
+      if (slot) {
+        slot.textContent = newValue || "Speaker";
+      }
     }
   }
 
   connectedCallback() {
     if (this.hasAttribute("avatar")) {
       const avatar = this.shadowRoot.getElementById("avatar");
+      const speaker = this.getAttribute("speaker");
       if (avatar) {
         avatar.src = this.getAttribute("avatar");
-        avatar.alt = this.getAttribute("speaker") || "Avatar";
+        avatar.alt = speaker || "Avatar";
+      }
+
+      const slot = this.shadowRoot.querySelector('slot[name="speaker"]');
+      if (slot) {
+        slot.textContent = speaker || "Speaker";
       }
     }
   }
