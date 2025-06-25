@@ -1,25 +1,34 @@
 import StyledComponent from "./styled-component.js";
-// Your EventCard component extends the base class
+
 class EventCard extends StyledComponent {
   static get observedAttributes() {
-    return ["avatar", "speaker"];
+    return ["avatar", "speaker", "agency", "agencyAvatar", "image"];
   }
 
   constructor() {
     super();
+    this.attributeMap = {
+      avatar: { element: "#avatar", property: "src" },
+      speaker: {
+        elements: [
+          { selector: "#avatar", property: "alt" },
+          { selector: 'slot[name="speaker"]', property: "textContent" },
+        ],
+      },
+      agency: { element: 'slot[name="agency"]', property: "textContent" },
+      agencyAvatar: { element: "#agency-avatar", property: "src" },
+    };
     this.render();
   }
 
   getTemplate() {
     return `
       <div class="card w-full m-0 flex flex-col items-start justify-between radius-lg">
-        <h3 class="mb-sm"><slot name="title"></slot></h3>
-        <div class="bg-gray-100 p-md flex flex-col items-start w-full radius-md">
-          <p><slot name="description"></slot></p>
-          <div class="font-weight-bold flex items-center my-md">
-            <img id="avatar" class="shadow-md radius-full mr-md" style="width:30px; height:30px;">
-            <span class="text-black"><slot name="speaker"></slot></span>
-          </div>
+        <div class="flex flex-col items-start justify-between px-md pb-md pt-4xl radius-lg w-full mb-md" 
+             style="background: url('${
+               this.getAttribute("image") || "public/demo-img.png"
+             }'); background-size: cover; background-position: center;">
+          <h3 class="mb-sm text-white text-shadow"><slot name="title"></slot></h3>
           <div class="flex flex-row items-center">
             <div class="shadow-md radius-md bg-primary p-sm font-weight-bold flex items-center mr-sm">
               <i class="ph-fill ph-calendar mr-xs text-white"></i>
@@ -28,6 +37,17 @@ class EventCard extends StyledComponent {
             <small class="shadow-md radius-md bg-primary p-sm font-weight-bold text-white">
               <slot name="location"></slot>
             </small>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-md flex flex-col items-start w-full radius-md flex-grow-1">
+          <p><slot name="description"></slot></p>
+          <div class="font-weight-bold flex items-center mb-sm">
+            <img id="avatar" class="shadow-md radius-full mr-md" style="width:30px; height:30px;">
+            <span class="text-black"><slot name="speaker"></slot></span>
+          </div>
+          <div class="font-weight-bold flex items-center">
+            <img id="agency-avatar" class="shadow-md radius-full mr-md" style="width:30px; height:30px;">
+            <span class="text-primary"><slot name="agency"></slot></span>
           </div>
         </div>
         <a href="#" class="mt-md w-full">
@@ -42,7 +62,6 @@ class EventCard extends StyledComponent {
   getComponentStyles() {
     return `
       <style>
-        /* Component-specific styles */
         .card {
           transition: transform 0.2s ease;
         }
@@ -54,41 +73,45 @@ class EventCard extends StyledComponent {
     `;
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "avatar") {
-      const avatar = this.shadowRoot.getElementById("avatar");
-      if (avatar) {
-        avatar.src = newValue;
-        avatar.alt = this.getAttribute("speaker") || "Avatar";
-      }
-    }
-    if (name === "speaker") {
-      const avatar = this.shadowRoot.getElementById("avatar");
-      if (avatar) {
-        avatar.alt = newValue || "Avatar";
-      }
+  updateAttribute(name, value) {
+    const config = this.attributeMap[name];
+    if (!config) return;
 
-      const slot = this.shadowRoot.querySelector('slot[name="speaker"]');
-      if (slot) {
-        slot.textContent = newValue || "Speaker";
+    if (config.elements) {
+      // Handle multiple elements
+      config.elements.forEach(({ selector, property }) => {
+        const element = this.shadowRoot.querySelector(selector);
+        if (element) {
+          element[property] = value || this.getDefaultValue(name);
+        }
+      });
+    } else {
+      // Handle single element
+      const element = this.shadowRoot.querySelector(config.element);
+      if (element) {
+        element[config.property] = value || this.getDefaultValue(name);
       }
     }
   }
 
-  connectedCallback() {
-    if (this.hasAttribute("avatar")) {
-      const avatar = this.shadowRoot.getElementById("avatar");
-      const speaker = this.getAttribute("speaker");
-      if (avatar) {
-        avatar.src = this.getAttribute("avatar");
-        avatar.alt = speaker || "Avatar";
-      }
+  getDefaultValue(attributeName) {
+    const defaults = {
+      speaker: "Speaker",
+      agency: "Agency",
+      avatar: "",
+      agencyAvatar: "",
+      image: "public/demo-img.png",
+    };
+    return defaults[attributeName] || "";
+  }
 
-      const slot = this.shadowRoot.querySelector('slot[name="speaker"]');
-      if (slot) {
-        slot.textContent = speaker || "Speaker";
+  connectedCallback() {
+    // Initialize all observed attributes
+    this.constructor.observedAttributes.forEach((attr) => {
+      if (this.hasAttribute(attr)) {
+        this.updateAttribute(attr, this.getAttribute(attr));
       }
-    }
+    });
   }
 }
 
