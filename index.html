@@ -9,23 +9,28 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
   <script src="./src/js/event-card.js" type="module"></script>
+  <link rel="icon" type="image/png" href="public/logo-silhouette.ico">
 </head>
 
 <body class="flex flex-col items-center justify-center">
-  <header class="sticky-header w-full mt-md radius-xl p-md w-full lg:w-10/12 xl:w-8/12" role="banner">
-    <img src="public/logo-silhouette.png" alt="Game Dev Arena Logo" style="height: 16rem;" />
+  <header class="sticky-header w-full mt-md rounded-none radius-xl p-md lg:w-10/12 xl:w-8/12" role="banner">
+    <div class="w-full">
+      <img src="public/logo-silhouette.png" alt="Game Dev Arena Logo" style="width: 160%;" />
+    </div>
     <h1 id="site-title" class="visually-hidden">Game Dev Arena</h1>
     <nav aria-label="Navigazione principale">
       <ul>
-        <li><a href="#home" aria-label="Vai alla sezione Talks">Talks</a></li>
-        <li><a href="#about" aria-label="Vai alla sezione Su di noi">Su di noi</a></li>
-        <li><a href="#contact" aria-label="Vai alla sezione Contatti">Contatti</a></li>
+        <li><a href="#events" aria-label="Vai alla sezione Talks">Eventi</a></li>
+        <li><a href="#mission" aria-label="Vai alla sezione Su di noi">Mission</a></li>
+        <li><a href="#contacts" aria-label="Vai alla sezione Contatti">Contatti</a></li>
       </ul>
     </nav>
-    <button id="contattaci" class="button button-secondary" aria-label="Contattaci via email">
-      <i class="ph-fill ph-envelope mr-xs" style="font-size:1.2em; vertical-align:middle;" aria-hidden="true"></i>
-      Contattaci
-    </button>
+    <div class="flex flex-row items-center justify-end">
+      <button id="contattaci" class="button button-secondary" aria-label="Contattaci via email">
+        <i class="ph-fill ph-envelope mr-xs" style="font-size:1.2em; vertical-align:middle;" aria-hidden="true"></i>
+        Contattaci
+      </button>
+    </div>
   </header>
 
   <section class="hero p-md text-white flex flex-col justify-center items-center h-10/12 lg:h-8/12"
@@ -45,7 +50,8 @@
 
   <section
     class="events-section p-md bg-primary m-md radius-lg shadow-lg flex flex-col items-center w-full lg:w-10/12 xl:w-8/12"
-    aria-labelledby="prossimi-eventi">
+    aria-labelledby="prossimi-eventi"
+    id="events">
     <h2 class="text-white mb-md" id="prossimi-eventi">Prossimi Eventi</h2>
     <div class="w-full flex flex-row flex-wrap justify-start align-start">
       <!-- event-card custom elements should have their own accessibility, but add role and aria-label for container -->
@@ -121,7 +127,7 @@
   </section>
 
   <section class="mission-section p-md m-md bg-white radius-lg flex flex-col items-start w-full lg:w-10/12 xl:w-8/12"
-    aria-labelledby="chi-siamo">
+    aria-labelledby="chi-siamo" id="mission">
     <h2 class="text-primary mb-md" id="chi-siamo">Game Dev Arena - Chi Siamo</h2>
     <p class="mb-md">
       Una nuova community dedicata agli sviluppatori e appassionati di videogame del nordest italiano.<br>
@@ -182,25 +188,23 @@
     </ul>
   </section>
 
-  <section class="footer p-md m-md flex flex-col items-center w-full lg:w-10/12 xl:w-8/12" role="contentinfo">
+  <section class="footer p-md m-md flex flex-col items-center w-full lg:w-10/12 xl:w-8/12" role="contentinfo" id="contacts">
     <div class="w-full flex flex-column md:flex-row flex-wrap justify-between items-center">
       <!-- Logo -->
       <!-- Contacts -->
-      <div class="mb-md md:mb-0 flex flex-col items-center w-full md:w-6/12">
-        <img src="public/logo.png" alt="Game Dev Arena Logo" style="height:48px;">
-        <span class="mt-xs text-secondary">Game Dev Arena</span>
+      <div class="mb-md md:mb-0 flex flex-col items-center w-full">
+        <img src="public/logo.png" alt="Game Dev Arena Logo" style="height:15rem">
         <h4 class="mb-xs">Contatti</h4>
-        <p class="mb-xs"><i class="ph-fill ph-envelope mr-xs" aria-hidden="true"></i> <span class="visually-hidden">Email:</span> info@gamedevarena.it</p>
-        <p class="mb-xs"><i class="ph-fill ph-phone mr-xs" aria-hidden="true"></i> <span class="visually-hidden">Telefono:</span> +39 0123 456789</p>
-        <p><i class="ph-fill ph-map-pin mr-xs" aria-hidden="true"></i> <span class="visually-hidden">Indirizzo:</span> Via Esempio 123, Milano</p>
-      </div>
-      <!-- Simple Map -->
-      <div class="flex flex-col items-center w-full md:w-6/12">
-        <h4 class="mb-xs">Dove siamo</h4>
-        <iframe
-          src="https://www.openstreetmap.org/export/embed.html?bbox=9.189982,45.464203,9.191982,45.466203&amp;layer=mapnik"
-          style="border:1px solid #ccc; width:500px; height:500px;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade" title="Mappa sede Game Dev Arena" aria-label="Mappa sede Game Dev Arena"></iframe>
+        <p class="mb-xs flex flex-row items-center justify-center">
+          <i class="ph-fill ph-envelope mr-xs" aria-hidden="true"></i>
+          <span class="visually-hidden">Email:</span>
+          <a href="mailto:hello.gamedevarena@gmail.com" class="text-primary" aria-label="Email">hello.gamedevarena@gmail.com</a>
+        </p>
+        <p class="mb-xs flex flex-row items-center">
+          <i class="ph-fill ph-github-logo mr-xs" aria-hidden="true"></i>
+          <span class="visually-hidden">GitHub:</span>
+          <a href="https://github.com/gamedevarena" target="_blank" rel="noopener noreferrer" class="text-primary" aria-label="Github Repository">github.com/gamedevarena</a>
+        </p>
       </div>
     </div>
 

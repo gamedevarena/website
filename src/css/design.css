@@ -199,6 +199,17 @@
   font-size: 1rem;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Prevent anchor content from being hidden under fixed header (adjust height as needed) */
+  scroll-padding-top: 20rem;
+}
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   :root {
