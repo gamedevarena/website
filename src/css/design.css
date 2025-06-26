@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Merriweather:wght@700;900&display=swap");
+@import url("/public/fonts/jetbrains-mono.css");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap");
+@import url("/public/fonts/fonts.css");
 
 :root {
   /* Primary Colors */
@@ -194,8 +196,8 @@
   --navbar-border: var(--border-light);
   --navbar-shadow: var(--shadow-sm);
 
-  --font-family-base: "Work Sans", "Inter", "Segoe UI", Arial, sans-serif;
-  --font-family-heading: "Merriweather", "Georgia", serif;
+  --font-family-base: "JetBrains Mono", "Work Sans", "Inter", "Segoe UI", Arial, sans-serif;
+  --font-family-heading: "Gotham", "Work Sans", "Inter", Arial, sans-serif;
   font-size: 1rem;
 }
 
@@ -901,12 +903,28 @@ ol {
   background-color: var(--color-black) !important;
 }
 
+.border {
+  border: 1px solid var(--border-light);
+}
 .border-color-white {
   border-color: var(--color-white) !important;
 }
 .border-color-light {
   border-color: var(--color-light) !important;
 }
+.border-color-primary{
+  border-color: var(--color-primary) !important;
+}
+.border-color-secondary {
+  border-color: var(--color-secondary) !important;
+}
+.border-color-tertiary {
+  border-color: var(--color-tertiary) !important;
+}
+.border-color-accent {
+  border-color: var(--color-accent) !important;
+}
+
 .border-color-gray-100 {
   border-color: var(--color-gray-100) !important;
 }

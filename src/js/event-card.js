@@ -30,11 +30,11 @@ class EventCard extends StyledComponent {
              }'); background-size: cover; background-position: center;">
           <h3 class="mb-sm text-white text-shadow"><slot name="title"></slot></h3>
           <div class="flex flex-row items-center">
-            <div class="shadow-md radius-md bg-primary p-sm font-weight-bold flex items-center mr-sm">
-              <i class="ph-fill ph-calendar mr-xs text-white"></i>
-              <small class="text-white"><slot name="date"></slot></small>
+            <div class="shadow-md radius-md bg-accent p-sm font-weight-bold flex items-center mr-sm">
+              <i class="ph-fill ph-calendar mr-xs"></i>
+              <small><slot name="date"></slot></small>
             </div>
-            <small class="shadow-md radius-md bg-primary p-sm font-weight-bold text-white">
+            <small class="shadow-md radius-md bg-accent p-sm font-weight-bold">
               <slot name="location"></slot>
             </small>
           </div>

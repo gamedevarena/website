@@ -37,18 +37,15 @@ wss.on("connection", (ws) => {
 });
 
 // Watch for file changes
-chokidar.watch([
-  "*.html",
-  "public/**/*",
-  "src/**/*.css",
-  "src/**/*.js"
-]).on("change", () => {
-  wss.clients.forEach((client) => {
-    if (client.readyState === WebSocket.OPEN) {
-      client.send("reload");
-    }
+chokidar
+  .watch(["*.html", "public/**/*", "src/**/*.css", "src/**/*.js"])
+  .on("change", () => {
+    wss.clients.forEach((client) => {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send("reload");
+      }
+    });
   });
-});
 
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

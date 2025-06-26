@@ -23,16 +23,6 @@ class StyledComponent extends HTMLElement {
         @import url('./src/css/design.css');
         @import url('./src/css/styles.css');
         @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css');
-        
-        /* You can also inline critical CSS here */
-        :host {
-          display: block;
-          box-sizing: border-box;
-        }
-        
-        *, *::before, *::after {
-          box-sizing: inherit;
-        }
       </style>
     `;
   }
