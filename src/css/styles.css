@@ -50,6 +50,10 @@ header nav ul li a:hover {
   color: var(--color-secondary);
 }
 
+header #logo {
+  width: 160%;
+}
+
 button {
   background-color: var(--color-secondary);
   color: var(--text-on-primary);
@@ -76,4 +80,47 @@ button:hover {
   top: var(--space-lg);
   z-index: 100;
   background: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: none;
+    font-size: 125%;
+  }
+
+  header {
+    grid-template-columns: 1fr 1fr;
+    height: 5rem;
+    padding: var(--space-sm);
+    top: 0;
+  }
+
+  header.mt-md {
+    margin-top: 0 !important;
+  }
+
+  header.radius-xl {
+    border-radius: 0 !important;
+  }
+
+  header.sticky-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+
+  header #logo {
+    width: 10rem;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header h1 {
+    font-size: var(--font-size-lg);
+    text-align: center;
+  }
 }
