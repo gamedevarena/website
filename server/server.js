@@ -37,7 +37,12 @@ wss.on("connection", (ws) => {
 });
 
 // Watch for file changes
-chokidar.watch(["*.html", "*.css", "*.js"]).on("change", () => {
+chokidar.watch([
+  "*.html",
+  "public/**/*",
+  "src/**/*.css",
+  "src/**/*.js"
+]).on("change", () => {
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
       client.send("reload");

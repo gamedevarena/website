@@ -1092,6 +1092,310 @@ ol {
   grid-auto-flow: column;
 }
 
+/* Grid Column Utilities */
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+}
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+}
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+}
+.grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+}
+.grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr)) !important;
+}
+.grid-cols-11 {
+  grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
+}
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+}
+
+/* Grid Row Utilities */
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr)) !important;
+}
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+}
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+}
+.grid-rows-4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
+}
+.grid-rows-5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr)) !important;
+}
+.grid-rows-6 {
+  grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+}
+.grid-rows-7 {
+  grid-template-rows: repeat(7, minmax(0, 1fr)) !important;
+}
+.grid-rows-8 {
+  grid-template-rows: repeat(8, minmax(0, 1fr)) !important;
+}
+.grid-rows-9 {
+  grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
+}
+.grid-rows-10 {
+  grid-template-rows: repeat(10, minmax(0, 1fr)) !important;
+}
+.grid-rows-11 {
+  grid-template-rows: repeat(11, minmax(0, 1fr)) !important;
+}
+.grid-rows-12 {
+  grid-template-rows: repeat(12, minmax(0, 1fr)) !important;
+}
+
+/* Responsive Grid Columns */
+@media (min-width: 768px) {
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-7 {
+    grid-template-rows: repeat(7, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-8 {
+    grid-template-rows: repeat(8, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-10 {
+    grid-template-rows: repeat(10, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-11 {
+    grid-template-rows: repeat(11, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-rows-12 {
+    grid-template-rows: repeat(12, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Responsive Grid Columns: lg */
+@media (min-width: 1024px) {
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-7 {
+    grid-template-rows: repeat(7, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-8 {
+    grid-template-rows: repeat(8, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-10 {
+    grid-template-rows: repeat(10, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-11 {
+    grid-template-rows: repeat(11, minmax(0, 1fr)) !important;
+  }
+  .lg\:grid-rows-12 {
+    grid-template-rows: repeat(12, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Responsive Grid Columns: xl */
+@media (min-width: 1280px) {
+  .xl\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-7 {
+    grid-template-rows: repeat(7, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-8 {
+    grid-template-rows: repeat(8, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-9 {
+    grid-template-rows: repeat(9, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-10 {
+    grid-template-rows: repeat(10, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-11 {
+    grid-template-rows: repeat(11, minmax(0, 1fr)) !important;
+  }
+  .xl\:grid-rows-12 {
+    grid-template-rows: repeat(12, minmax(0, 1fr)) !important;
+  }
+}
+
 /* Button Component */
 .button {
   display: inline-flex;
@@ -1544,3 +1848,4 @@ ol {
 .font-weight-light {
   font-weight: 300 !important;
 }
+

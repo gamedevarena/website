@@ -15,6 +15,7 @@
     />
     <script src="./src/js/event-card.js" type="module"></script>
     <script src="./src/js/founder-card.js" type="module"></script>
+    <script src="./src/js/mission-card.js" type="module"></script>
     <link rel="icon" type="image/png" href="public/logo-silhouette.ico" />
   </head>
 
@@ -234,73 +235,83 @@
         crescere l'ecosistema locale del game development.
       </p>
       <h4 class="mb-xs">La Nostra Missione</h4>
-      <ul class="mb-md">
-        <li>
-          Supportare la crescita professionale e creativa di sviluppatori,
-          designer, artisti e tutti gli appassionati di videogame attraverso:
-          <ul class="ml-md">
-            <li>Networking qualificato tra professionisti del settore.</li>
-            <li>Formazione continua con talk e workshop specializzati.</li>
-            <li>
-              Supporto ai neofiti tramite mentorship e condivisione di
-              esperienze.
-            </li>
-            <li>
-              Valorizzazione del talento locale e delle eccellenze del
-              territorio.
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h4 class="mb-xs">Attività Principali</h4>
-      <ul class="mb-md">
-        <li>
-          <strong>Eventi Mensili:</strong> 8/9 incontri all'anno alla fine della
-          giornata lavorativa con talk da professionisti del settore.<br />
-          <span class="ml-md"
-            >Location: 311 Verona - spazio innovativo per eventi tech e
-            creativi.<br />
-            Proseguimento informale in pizzeria per favorire Q&amp;A e
-            networking.</span
-          >
-        </li>
-        <li>
-          <strong>Iniziative Speciali:</strong>
-          <ul class="ml-md">
-            <li>
-              Game Jam annuale: competizione creativa per sviluppatori di tutti
-              i livelli.
-            </li>
-            <li>
-              Workshop pratici: approfondimenti su tool, tecniche e trend di
-              mercato.
-            </li>
-            <li>
-              Database professionale: mappatura di talenti e aziende del
-              territorio.
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h4 class="mb-xs">Opportunità di Collaborazione</h4>
-      <p class="mb-md">Cerchiamo partnership con:</p>
-      <ul class="ml-md">
-        <li>Università e istituti di formazione.</li>
-        <li>Aziende del settore gaming e tech.</li>
-        <li>Enti locali per la promozione dell'innovazione.</li>
-        <li>Collaborazioni con altre iniziative simili sul territorio.</li>
-      </ul>
-
-      <h4 class="mb-xs">Contatti e Prossimi Passi</h4>
-      <p class="mb-md">
-        La community è in fase di lancio e cerchiamo collaborazioni per:
-      </p>
-      <ul>
-        <li>Condivisione di expertise e mentorship.</li>
-        <li>Sponsorizzazioni e partnership strategiche.</li>
-        <li>Interventi qualificati (talk).</li>
-      </ul>
-      <h4 class="mb-xs">Founders / Mentors / Advisors</h4>
+      <div class="mission-cards grid gap-md w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+        <mission-card bg="bg-gray-100" icon="ph-fill ph-users">
+          <span slot="title">Networking qualificato</span>
+          <span slot="description">Connessioni tra professionisti del settore per favorire collaborazioni e crescita.</span>
+        </mission-card>
+        <mission-card bg="bg-gray-100" icon="ph-fill ph-graduation-cap">
+          <span slot="title">Formazione continua</span>
+          <span slot="description">Talk e workshop specializzati per aggiornarsi sulle ultime novità del game development.</span>
+        </mission-card>
+        <mission-card bg="bg-gray-100" icon="ph-fill ph-handshake">
+          <span slot="title">Mentorship e supporto</span>
+          <span slot="description">Aiuto ai neofiti tramite mentorship e condivisione di esperienze tra membri della community.</span>
+        </mission-card>
+        <mission-card bg="bg-gray-100" icon="ph-fill ph-star">
+          <span slot="title">Valorizzazione del talento</span>
+          <span slot="description">Promozione delle eccellenze locali e delle competenze del territorio.</span>
+        </mission-card>
+      </div>
+      <h4 class="mb-xs mt-3xl">Attività Principali</h4>
+      <div class="mission-cards grid gap-md w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+        <mission-card bg="bg-white" icon="ph-fill ph-calendar">
+          <span slot="title">Eventi Mensili</span>
+          <span slot="description">8/9 incontri all'anno con talk da professionisti del settore.</span>
+          <div class="flex flex-col gap-xs ml-md">
+            <span class="text-muted">Location: 311 Verona - spazio innovativo per eventi tech e creativi.</span>
+            <span class="text-muted">Networking informale in pizzeria dopo gli eventi.</span>
+          </div>
+        </mission-card>
+        <mission-card bg="bg-white" icon="ph-fill ph-game-controller">
+          <span slot="title">Game Jam annuale</span>
+          <span slot="description">Competizione creativa aperta a sviluppatori di tutti i livelli.</span>
+        </mission-card>
+        <mission-card bg="bg-white" icon="ph-fill ph-wrench">
+          <span slot="title">Workshop pratici</span>
+          <span slot="description">Approfondimenti su tool, tecniche e trend di mercato con esperti del settore.</span>
+        </mission-card>
+        <mission-card bg="bg-white" icon="ph-fill ph-database">
+          <span slot="title">Database professionale</span>
+          <span slot="description">Mappatura di talenti e aziende del territorio per favorire opportunità di collaborazione.</span>
+        </mission-card>
+      </div>
+      <h4 class="mb-xs mt-3xl">Opportunità di Collaborazione</h4>
+      <div class="mission-cards grid gap-md w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+        <mission-card bg="bg-gray-100" icon="ph-fill ph-student">
+          <span slot="title">Università e istituti di formazione</span>
+          <span slot="description">Collaborazione con enti accademici per formazione e ricerca.</span>
+        </mission-card>
+        <mission-card bg="bg-gray-100" icon="ph-fill ph-building">
+          <span slot="title">Aziende gaming e tech</span>
+          <span slot="description">Partnership con aziende per progetti, eventi e opportunità di lavoro.</span>
+        </mission-card>
+        <mission-card bg="bg-gray-100" icon="ph-fill ph-map-pin">
+          <span slot="title">Enti locali</span>
+          <span slot="description">Promozione dell'innovazione e del territorio attraverso il supporto degli enti locali.</span>
+        </mission-card>
+        <mission-card bg="bg-gray-100" icon="ph-fill ph-users-three">
+          <span slot="title">Altre iniziative</span>
+          <span slot="description">Collaborazione con altre community e progetti simili per ampliare l'impatto.</span>
+        </mission-card>
+      </div>
+      <h4 class="mb-xs mt-3xl">Contatti e Prossimi Passi</h4>
+      <div class="mission-cards grid gap-md w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+        <mission-card bg="bg-white" icon="ph-fill ph-lightbulb">
+          <span slot="title">Expertise & Mentorship</span>
+          <span slot="description">Condivisione di competenze e supporto ai membri della community.</span>
+        </mission-card>
+        <mission-card bg="bg-white" icon="ph-fill ph-hand-coins">
+          <span slot="title">Sponsorizzazioni</span>
+          <span slot="description">Partnership strategiche per sostenere la crescita della community.</span>
+        </mission-card>
+        <mission-card bg="bg-white" icon="ph-fill ph-microphone">
+          <span slot="title">Interventi qualificati</span>
+          <span slot="description">Cerchiamo speaker e professionisti per talk e workshop.</span>
+        </mission-card>
+      </div>
+      
+      <h4 class="mb-xs mt-3xl">Founders / Mentors / Advisors</h4>
 
       <div class="w-full flex flex-row items-start justify-center">
         <founder-card
