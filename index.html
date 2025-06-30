@@ -17,10 +17,8 @@
     <script src="./src/js/founder-card.js" type="module"></script>
     <script src="./src/js/mission-card.js" type="module"></script>
     <link rel="icon" type="image/png" href="public/logo-silhouette.ico" />
-    <link rel="stylesheet" href="./src/css/mailchimp-form.css" />
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   </head>
-
+ 
   <body class="flex flex-col items-center justify-center">
     <header
       class="sticky-header w-full mt-md rounded-none radius-xl p-md lg:w-10/12 xl:w-8/12"
@@ -257,23 +255,23 @@
       </div>
       <h4 class="mb-xs mt-3xl">Attività Principali</h4>
       <div class="mission-cards grid gap-md w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-        <mission-card bg="bg-gray-200" icon="ph-fill ph-calendar">
+        <mission-card bg="bg-white" icon="ph-fill ph-calendar">
           <span slot="title">Eventi Mensili</span>
           <span slot="description">8/9 incontri all'anno con talk da professionisti del settore.</span>
           <div class="flex flex-col gap-xs ml-md mt-md">
-            <span class="text-muted">Location: <span class="text-accent">311 Verona</span> - spazio innovativo per eventi tech e creativi.</span>
+            <span class="text-muted">Location: <span class="bg-accent">311 Verona</span> - spazio innovativo per eventi tech e creativi.</span>
             <span class="text-muted">Networking informale in pizzeria dopo gli eventi.</span>
           </div>
         </mission-card>
-        <mission-card bg="bg-gray-200" icon="ph-fill ph-game-controller">
+        <mission-card bg="bg-white" icon="ph-fill ph-game-controller">
           <span slot="title">Game Jam annuale</span>
           <span slot="description">Competizione creativa aperta a sviluppatori di tutti i livelli.</span>
         </mission-card>
-        <mission-card bg="bg-gray-200" icon="ph-fill ph-wrench">
+        <mission-card bg="bg-white" icon="ph-fill ph-wrench">
           <span slot="title">Workshop pratici</span>
           <span slot="description">Approfondimenti su tool, tecniche e trend di mercato con esperti del settore.</span>
         </mission-card>
-        <mission-card bg="bg-gray-200" icon="ph-fill ph-database">
+        <mission-card bg="bg-white" icon="ph-fill ph-database">
           <span slot="title">Database professionale</span>
           <span slot="description">Mappatura di talenti e aziende del territorio per favorire opportunità di collaborazione.</span>
         </mission-card>
@@ -299,15 +297,15 @@
       </div>
       <h4 class="mb-xs mt-3xl">Contatti e Prossimi Passi</h4>
       <div class="mission-cards grid gap-md w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-        <mission-card bg="bg-gray-200" icon="ph-fill ph-lightbulb">
+        <mission-card bg="bg-white" icon="ph-fill ph-lightbulb">
           <span slot="title">Expertise & Mentorship</span>
           <span slot="description">Condivisione di competenze e supporto ai membri della community.</span>
         </mission-card>
-        <mission-card bg="bg-gray-200" icon="ph-fill ph-hand-coins">
+        <mission-card bg="bg-white" icon="ph-fill ph-hand-coins">
           <span slot="title">Sponsorizzazioni</span>
           <span slot="description">Partnership strategiche per sostenere la crescita della community.</span>
         </mission-card>
-        <mission-card bg="bg-gray-200" icon="ph-fill ph-microphone">
+        <mission-card bg="bg-white" icon="ph-fill ph-microphone">
           <span slot="title">Interventi qualificati</span>
           <span slot="description">Cerchiamo speaker e professionisti per talk e workshop.</span>
         </mission-card>
@@ -356,16 +354,16 @@
       </div>
     </section>
 
-    <section class="newsletter-section p-md m-md radius-lg flex flex-col items-start w-full lg:w-10/12 xl:w-8/12" aria-labelledby="newsletter-title">
-      <div id="mc_embed_shell" class="w-full flex flex-col items-center justify-center">
-        <div id="mc_embed_signup">
-          <form action="https://github.us12.list-manage.com/subscribe/post?u=3f94f945082029a4def33014f&amp;id=cd2ad9f361&amp;f_id=0086b1e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-              <h5 class="mb-xs">Iscriviti alla newsletter</h5>
-              <div class="indicates-required"><span class="asterisk">*</span> indica requisiti obbligatori</div>
-              <div class="mc-field-group mb-sm">
-                <label for="mce-EMAIL">Indirizzo email <span class="asterisk">*</span></label>
-                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="" />
+    <section class="newsletter-section card my-4xl p-md m-md radius-lg flex flex-col items-start w-full lg:w-8/12 xl:w-6/12" aria-labelledby="newsletter-title">
+      <div id="mc_embed_shell" class="w-full">
+        <div id="mc_embed_signup" class="w-full flex flex-col items-center justify-center">
+          <form action="https://github.us12.list-manage.com/subscribe/post?u=3f94f945082029a4def33014f&amp;id=cd2ad9f361&amp;f_id=0086b1e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate flex w-full" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll" class="w-full flex flex-col items-center justify-center gap-sm">
+              <h5 class="mb-xs w-full">Iscriviti alla newsletter</h5>
+              <p class="text-muted w-full">Ricevi aggiornamenti su eventi, workshop e novità della community.</p>
+              <div class="mc-field-group mb-sm flex flex-col w-full">
+                <label for="mce-EMAIL">Indirizzo email <span class="asterisk text-error">*</span></label>
+                <input type="email" placeholder="example@domain.com" name="EMAIL" class="required email" id="mce-EMAIL" required value="" />
               </div>
               <div id="mce-responses" class="clear foot">
                 <div class="response" id="mce-error-response" style="display:none"></div>
@@ -375,8 +373,17 @@
                 <input type="text" name="b_3f94f945082029a4def33014f_cd2ad9f361" tabindex="-1" value="" />
               </div>
               <div class="optionalParent">
-                <div class="clear foot flex flex-col items-center">
-                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button button-primary" value="Iscriviti" />
+                <div class="clear foot flex flex-col gap-md w-full items-center justify-center">
+                  <button
+                    type="submit"
+                    id="mc-embedded-subscribe"
+                    class="button button-primary w-auto flex flex-row items-center justify-center"
+                    aria-label="Iscriviti alla newsletter"
+                    name="subscribe"
+                  >
+                    <i class="ph-fill ph-envelope-simple-open mr-xs" aria-hidden="true"></i>
+                    <span class="align-middle">Iscriviti</span>
+                  </button>
                   <p style="margin:0 auto;">
                     <a href="http://eepurl.com/jh_8ao" title="Mailchimp: l’email marketing è facile e divertente">
                       <span style="display:inline-block; background-color:transparent; border-radius:4px;">
@@ -446,8 +453,10 @@
       window.addEventListener("scroll", () => {
         if (window.scrollY > 24) {
           header.classList.add("shadow-md");
+          header.classList.add("bg-white");
         } else {
           header.classList.remove("shadow-md");
+          header.classList.remove("bg-white");
         }
       });
 

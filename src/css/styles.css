@@ -20,6 +20,9 @@ header {
   padding: var(--space-md);
   height: 5rem;
   overflow: visible;
+
+  transition: background-color var(--transition-base),
+              box-shadow var(--transition-base);
 }
 
 header h1 {
@@ -58,7 +61,6 @@ header #logo {
   position: sticky;
   top: var(--space-lg);
   z-index: 100;
-  background: inherit;
 }
 
 @media screen and (max-width: 768px) {

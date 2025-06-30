@@ -4,7 +4,7 @@
 
 :root {
   /* Primary Colors */
-  --color-primary: #00809d; /* Ocean teal */
+  --color-primary: #1f4572; /* Ocean teal */
   --color-secondary: #ff7601; /* Vibrant orange */
   --color-tertiary: #f3a26d; /* Soft coral */
   --color-accent: #fcecdd; /* Warm cream */
@@ -167,9 +167,9 @@
   --space-4xl: 6rem; /* 96px */
 
   /* Border Radius */
-  --radius-sm: 0.25rem; /* 4px */
-  --radius-md: 0.5rem; /* 8px */
-  --radius-lg: 0.75rem; /* 12px */
+  --radius-sm: 0.15rem; /* 4px */
+  --radius-md: 0.3rem; /* 8px */
+  --radius-lg: 0.5rem; /* 12px */
   --radius-xl: 1rem; /* 16px */
   --radius-2xl: 1.5rem; /* 24px */
   --radius-full: 9999px;
@@ -199,59 +199,6 @@
   --font-family-base: "JetBrains Mono", "Work Sans", "Inter", "Segoe UI", Arial, sans-serif;
   --font-family-heading: "Gotham", "Work Sans", "Inter", Arial, sans-serif;
   font-size: 1rem;
-}
-
-/* Dark Mode Colors */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Override background and text for dark mode */
-    --bg-primary: #000000; /* Black background for testing */
-    --bg-secondary: #222222; /* Slightly lighter for secondary backgrounds */
-    --bg-tertiary: #333333;
-    --bg-accent-primary: #111111;
-    --bg-accent-secondary: #222222;
-    --bg-accent-tertiary: #333333;
-    --bg-accent-light: #222222;
-    --bg-overlay: rgba(255,255,255,0.05);
-
-    --color-white: #ffffff;
-    --color-black: #000000;
-
-    --text-primary: #ffffff; /* White text for testing */
-    --text-secondary: #cccccc;
-    --text-muted: #888888;
-    --text-light: #eeeeee;
-    --text-on-primary: #000000;
-    --text-on-secondary: #000000;
-    --text-on-tertiary: #000000;
-    --text-on-accent: #ffffff;
-    --text-on-dark: #ffffff;
-
-  --card-bg: var(--color-black);
-  --card-border: var(--border-dark);
-  --card-shadow: var(--shadow-md);
-
-  --color-gray-100: #1a1a1a; /* Very light gray (inverted to almost black) */
-  --color-gray-200: #333333; /* Light gray (inverted to very dark gray) */
-  --color-gray-300: #666666; /* Medium light gray (inverted to darker gray) */
-  --color-gray-500: #7f7f7f; /* Medium dark gray (inverted to dark gray) */
-  --color-gray-600: #999999; /* Dark gray (inverted to medium dark gray) */
-  --color-gray-700: #cccccc; /* Darker gray (inverted to medium light gray) */
-  --color-gray-800: #e0e0e0; /* Very dark gray (inverted to light gray) */
-  --color-gray-900: #f0f0f0; /* Almost black (inverted to very light gray) */
-  
-    /* Borders and shadows for dark mode */
-    --border-light: #333333;
-    --border-medium: #444444;
-    --border-dark: #555555;
-    --border-accent: #00809d;
-    --border-secondary: #ff7601;
-
-    /* Shadows (lighter for dark bg) */
-    --shadow-sm: 0 1px 2px rgba(255,255,255,0.05);
-    --shadow-md: 0 4px 6px rgba(255,255,255,0.08);
-    --shadow-lg: 0 10px 15px rgba(255,255,255,0.12);
-  }
 }
 
 *,
@@ -285,7 +232,7 @@ html {
 body {
   font-size: var(--font-size-base);
   color: var(--text-primary);
-  background-color: var(--bg-primary);
+  background-color: var(--bg-accent-light);
   font-family: var(--font-family-base);
   line-height: 1.6;
 }
@@ -918,7 +865,12 @@ p, ul, ol {
 .text-black {
   color: var(--color-black) !important;
 }
-
+.text-error {
+  color: var(--color-error) !important;
+}
+.text-success {
+  color: var(--color-success) !important;
+}
 .text-shadow {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
@@ -1535,6 +1487,49 @@ p, ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Input Field Styling (Design System) */
+.input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="url"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md, 0.5rem);
+  border: 1px solid var(--color-gray-300);
+  font-size: 1rem;
+  background: var(--color-gray-100);
+  color: var(--text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary-light, #1a99b8);
+}
+input:disabled,
+textarea:disabled {
+  background: var(--color-gray-200);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+input.error,
+textarea.error {
+  border-color: var(--color-error, #e74c3c);
+  background: #fff6f6;
+}
+input.success,
+textarea.success {
+  border-color: var(--color-success, #27ae60);
+  background: #f6fff8;
 }
 
 /* Utility: visually hidden (for accessibility) */
