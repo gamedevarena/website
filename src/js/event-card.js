@@ -43,7 +43,7 @@ class EventCard extends StyledComponent {
           <p><slot name="description"></slot></p>
           <div class="font-weight-bold flex items-center mb-sm">
             <img id="avatar" class="shadow-md radius-full mr-md" style="width:30px; height:30px;">
-            <span class="text-black"><slot name="speaker"></slot></span>
+            <span><slot name="speaker"></slot></span>
           </div>
           <div class="font-weight-bold flex items-center">
             <img id="agency-avatar" class="shadow-md radius-full mr-md" style="width:30px; height:30px;">

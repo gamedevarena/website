@@ -201,10 +201,64 @@
   font-size: 1rem;
 }
 
+/* Dark Mode Colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Override background and text for dark mode */
+    --bg-primary: #000000; /* Black background for testing */
+    --bg-secondary: #222222; /* Slightly lighter for secondary backgrounds */
+    --bg-tertiary: #333333;
+    --bg-accent-primary: #111111;
+    --bg-accent-secondary: #222222;
+    --bg-accent-tertiary: #333333;
+    --bg-accent-light: #222222;
+    --bg-overlay: rgba(255,255,255,0.05);
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --text-primary: #ffffff; /* White text for testing */
+    --text-secondary: #cccccc;
+    --text-muted: #888888;
+    --text-light: #eeeeee;
+    --text-on-primary: #000000;
+    --text-on-secondary: #000000;
+    --text-on-tertiary: #000000;
+    --text-on-accent: #ffffff;
+    --text-on-dark: #ffffff;
+
+  --card-bg: var(--color-black);
+  --card-border: var(--border-dark);
+  --card-shadow: var(--shadow-md);
+
+  --color-gray-100: #1a1a1a; /* Very light gray (inverted to almost black) */
+  --color-gray-200: #333333; /* Light gray (inverted to very dark gray) */
+  --color-gray-300: #666666; /* Medium light gray (inverted to darker gray) */
+  --color-gray-500: #7f7f7f; /* Medium dark gray (inverted to dark gray) */
+  --color-gray-600: #999999; /* Dark gray (inverted to medium dark gray) */
+  --color-gray-700: #cccccc; /* Darker gray (inverted to medium light gray) */
+  --color-gray-800: #e0e0e0; /* Very dark gray (inverted to light gray) */
+  --color-gray-900: #f0f0f0; /* Almost black (inverted to very light gray) */
+  
+    /* Borders and shadows for dark mode */
+    --border-light: #333333;
+    --border-medium: #444444;
+    --border-dark: #555555;
+    --border-accent: #00809d;
+    --border-secondary: #ff7601;
+
+    /* Shadows (lighter for dark bg) */
+    --shadow-sm: 0 1px 2px rgba(255,255,255,0.05);
+    --shadow-md: 0 4px 6px rgba(255,255,255,0.08);
+    --shadow-lg: 0 10px 15px rgba(255,255,255,0.12);
+  }
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  line-height: normal;
 }
 
 html {
@@ -212,6 +266,7 @@ html {
   /* Prevent anchor content from being hidden under fixed header (adjust height as needed) */
   scroll-padding-top: 20rem;
 }
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   :root {
@@ -266,9 +321,11 @@ h6 {
   font-size: var(--font-size-base);
 }
 
-p,
-ul,
-ol {
+span, small, em, strong, b, i, u, a {
+  color: var(--text-primary);
+}
+
+p, ul, ol {
   color: var(--text-secondary);
   margin-bottom: var(--space-md);
 }
@@ -1432,6 +1489,9 @@ ol {
   background: var(--button-primary-bg);
   color: var(--text-on-primary);
 }
+.button-primary * {
+  color: var(--text-on-primary);
+}
 .button-primary:hover {
   background: var(--button-primary-hover);
 }
@@ -1439,11 +1499,17 @@ ol {
   background: var(--button-secondary-bg);
   color: var(--text-on-secondary);
 }
+.button-secondary * {
+  color: var(--text-on-secondary);
+}
 .button-secondary:hover {
   background: var(--button-secondary-hover);
 }
 .button-tertiary {
   background: var(--button-tertiary-bg);
+  color: var(--text-on-tertiary);
+}
+.button-tertiary * {
   color: var(--text-on-tertiary);
 }
 .button-tertiary:hover {
